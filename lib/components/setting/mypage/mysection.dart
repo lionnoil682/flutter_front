@@ -1,29 +1,47 @@
-// ✅ MySection (mysection.dart)
 import 'package:flutter/material.dart';
-import 'package:smart_safe_return/components/setting/myprofile.dart';
-import 'package:smart_safe_return/components/setting/mysafeguard.dart';
+import 'package:smart_safe_return/components/setting/profile/myprofile.dart';
+import 'package:smart_safe_return/components/setting/safeguard/mysafeguard.dart';
+import 'package:smart_safe_return/components/setting/sossms/mysossms.dart';
+import 'package:smart_safe_return/components/setting/backhomelog/backhome_list.dart';
+import 'package:smart_safe_return/components/setting/inquiry/inquiry.dart';
 
 class MySection extends StatelessWidget {
   const MySection({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        _buildMenuItem(context, Icons.person, '내 정보 수정', const MyProfile()),
-        _buildDivider(),
-        _buildMenuItem(
-            context, Icons.contact_phone, '긴급 연락처 설정', const MySafeguard()),
-        _buildDivider(),
-        _buildMenuItem(
-            context, Icons.sms, '자동 발송될 메시지 내용 설정', const Placeholder()),
-        _buildDivider(),
-        _buildMenuItem(context, Icons.map, '귀가 기록 보기', const Placeholder()),
-        _buildDivider(),
-        _buildMenuItem(
-            context, Icons.help_outline, '문의하기', const Placeholder()),
-        _buildDivider(),
-      ],
+    return SingleChildScrollView(
+      // SingleChildScrollView로 감싸서 스크롤 가능하게 변경
+      child: Column(
+        children: [
+          _buildMenuItem(context, Icons.person, '내 정보 수정', const MyProfile()),
+          _buildDivider(),
+          _buildMenuItem(
+              context, Icons.contact_phone, '긴급 연락처 설정', const MySafeguard()),
+          _buildDivider(),
+          _buildMenuItem(
+            context,
+            Icons.sms,
+            'SOS 메시지 내용 설정',
+            const MySosSms(),
+          ),
+          _buildDivider(),
+          _buildMenuItem(
+            context,
+            Icons.map,
+            '귀가 기록 보기',
+            const BackHomeList(),
+          ),
+          _buildDivider(),
+          _buildMenuItem(
+            context,
+            Icons.help_outline,
+            '문의하기',
+            const Inquiry(),
+          ),
+          _buildDivider(),
+        ],
+      ),
     );
   }
 

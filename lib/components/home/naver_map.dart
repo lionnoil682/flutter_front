@@ -7,12 +7,12 @@
 //   @override
 //   Widget build(BuildContext context) {
 //     return Scaffold(
-//       // body: NaverMap(
-//       //   options: NaverMapViewOptions(
-//       //     initialCameraPosition: NCameraPosition(
-//       //       target: NLatLng(37.5665, 126.9780), // 서울 중심 좌표
-//       //       zoom: 15,
-//       //     ),
+//       body: NaverMap(
+//         options: NaverMapViewOptions(
+//           initialCameraPosition: NCameraPosition(
+//             target: NLatLng(37.5665, 126.9780), // 서울 중심 좌표
+//             zoom: 15,
+//           ),
 //         ),
 //         onMapReady: (myMapController) {
 //           debugPrint("네이버 맵 로딩됨!");

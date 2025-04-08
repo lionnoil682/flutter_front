@@ -1,6 +1,6 @@
 // import 'package:flutter/material.dart';
 // import 'package:flutter_dotenv/flutter_dotenv.dart';
-// // import 'package:flutter_naver_map/flutter_naver_map.dart';
+// import 'package:flutter_naver_map/flutter_naver_map.dart';
 // import 'package:smart_safe_return/components/navbar/bottom_bar.dart';
 // import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -18,17 +18,16 @@
 // Future<void> _initialize() async {
 //   String naverClientId =
 //       dotenv.env['NAVER_CLIENT_ID'] ?? 'vapc94wk74'; // .env에서 클라이언트 아이디 가져오기
-//   // print(naverClientId);
+//   print(naverClientId);
 
 //   if (naverClientId.isEmpty) {
 //     throw Exception("네이버 클라이언트 아이디가 .env 파일에 설정되지 않았습니다.");
 //   }
 
-//   // await NaverMapSdk.instance.initialize(
-//   //   clientId: naverClientId, // 클라이언트 ID 설정
-//   //   onAuthFailed: (e) => print("네이버 맵 인증 실패: $e"),
-//   // );
-
+//   await NaverMapSdk.instance.initialize(
+//     clientId: naverClientId, // 클라이언트 ID 설정
+//     onAuthFailed: (e) => print("네이버 맵 인증 실패: $e"),
+//   );
 // }
 
 // class MyApp extends StatelessWidget {
